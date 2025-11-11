@@ -1,0 +1,19 @@
+- name: Authenticate with CyberArk
+  hosts: localhost
+  vars:
+    web_services_base_url: "fmcunixssh.fmcna.com"
+    password_object_username: "z00663295@CSDmanager"
+    password_object_password: "Safety@swim1195"
+  tasks:
+    - name: Log in to CyberArk
+      cyberark.pas.cyberark_authentication:
+        api_base_url: "{{ web_services_base_url }}"
+        username: "{{ password_object_username }}"
+        password: "{{ password_object_password }}"
+        validate_certs: false
+      register: cyberark_session
+              
+
+    - name: Use the session token
+      debug:
+        msg: "Session token: {{ cyberark_session.token }}"
