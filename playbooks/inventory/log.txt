@@ -1,0 +1,11 @@
+ERROR! the playbook: kbdinteractive could not be found
+ansible-playbook [core 2.15.13]
+  config file = /home/CSDmanager/.ansible.cfg
+  configured module search path = ['/home/CSDmanager/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /var/www/html/CSDmanager/.venv/lib64/python3.9/site-packages/ansible
+  ansible collection location = /home/CSDmanager/.ansible/collections:/usr/share/ansible/collections
+  executable location = /var/www/html/CSDmanager/.venv/bin/ansible-playbook
+  python version = 3.9.23 (main, Aug 19 2025, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-11)] (/var/www/html/CSDmanager/.venv/bin/python3)
+  jinja version = 3.1.6
+  libyaml = True
+Using /home/CSDmanager/.ansible.cfg as config file

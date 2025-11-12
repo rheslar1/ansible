@@ -1,0 +1,15 @@
+---
+- name: Echo a string to a command
+  hosts: development_database_host  
+  remote_user: CSDmanager
+  gather_facts: yes
+  tasks:
+    - name: Echo "hello world" into grep
+      ansible.builtin.command: |
+        echo "hello world" | grep result
+      become: true
+      register: result
+
+    - name: Show command output
+      ansible.builtin.debug:
+        msg: "{{ result.stdout }}"
